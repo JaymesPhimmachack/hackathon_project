@@ -7,7 +7,53 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div class="wrapper">
+  <h1 class="puzzle-title">Hexgon Jigsaw Puzzle</h1>
+  <section id="droppableZone" class="drop-zone" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
+    <div id="p05" class="piece piece05" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p06" class="piece piece06" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p07" class="piece piece07" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p08" class="piece piece08" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p09" class="piece piece09" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p10" class="piece piece10" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p11" class="piece piece11" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p12" class="piece piece12" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p13" class="piece piece13" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p14" class="piece piece14" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p15" class="piece piece15" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p16" class="piece piece16" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p17" class="piece piece17" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p18" class="piece piece18" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p19" class="piece piece19" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p20" class="piece piece20" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p21" class="piece piece21" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p22" class="piece piece22" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p23" class="piece piece23" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p24" class="piece piece24" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p25" class="piece piece25" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p26" class="piece piece26" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p27" class="piece piece27" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p28" class="piece piece28" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p29" class="piece piece29" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p30" class="piece piece30" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p31" class="piece piece31" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p32" class="piece piece32" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p34" class="piece piece34" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p35" class="piece piece35" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p36" class="piece piece36" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p37" class="piece piece37" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p38" class="piece piece38" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p39" class="piece piece39" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p40" class="piece piece40" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p41" class="piece piece41" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p42" class="piece piece42" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p43" class="piece piece43" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p44" class="piece piece44" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+    <div id="p45" class="piece piece45" draggable="true" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);"></div>
+  </section>
+  <div class="scramble-button button" onclick="click_handler(event);">Scramble</div>
+  <section id="pieces-tray" class="pieces-tray"></section>
+
+ <!--  <div class="wrapper">
   <div class="puzzle">
     <div class="drop_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div class="hexagon" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -18,14 +64,10 @@
       <span class="levels">Medium</span>
       <span class="levels">Hard</span>
     </div>
-    
+
     <div class="start">Scramble</div>
     <div class="hint">Hint</div>
-
-    <div class="puzzle_tray">
-       <div ondragstart="dragStart(event)" draggable="true" id="piece1"></div>
-    </div>
-  </div>
+  </div> -->
   <script src="script.js"></script>
 </body>
 </html>
