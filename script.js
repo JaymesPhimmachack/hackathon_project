@@ -1,13 +1,62 @@
+/* *******************************************************
+ *
+ * JavaScript implementation for the Hexagon Jigsaw Puzzle,
+ * a hackathon project at Learn.ModernDeveloper
+ * - https://learn.moderndeveloper.com
+ *
+ * Authors:
+ * 1. Denine Guy
+ * 2. Jaymes Phimmachack
+ * 3. Joseph M. Matembu
+ * 4. Lukas Andersen
+ *
+ * *******************************************************
+ */
+
+
+
+var settings = {};
 var gameStarted = false;
 var count = 0;
 var bg = document.querySelector('#droppableZone');
 var clock = document.getElementById('clock');
 var hint = document.getElementById('hint');
 var reset = document.getElementById('reset');
+var easyButton = document.getElementById('easy');
+var mediumButton = document.getElementById('medium');
+var hardButton = document.getElementById('hard');
 var scramble = document.getElementById('scramble');
 var pieces = [].slice.call(document.querySelectorAll('.piece'));
+var buttonsToHide = [easyButton, mediumButton, hardButton];
+var difficultyButtons = document.querySelectorAll('.difficulty_button');
+var animations = ["animate", "animate_rotate", "animate_horizontal", "animate_vertical", "animate_crazy"];
 var puzzle = document.getElementById('solved-hint');
 var timer = null;
+
+// A few settings for the puzzle
+
+settings.durationBeforeCongs = 3000; // In milliseconds
+settings.difficulty = "easy"; // To be changed by user if they click the difficulty buttons
+settings.durations = {"easy": 300, "medium": 150, "hard": 60}; // In seconds
+settings.getDuration = function() {
+  return this.durations[this.difficulty];
+};
+// Change the difficulty level when user clicks any of the difficulty buttons
+settings.setDifficulty = function(value) {
+  return this.difficulty = value;
+};
+
+// Get the difficulty selected by the user
+easyButton.addEventListener('click', function() {
+  settings.setDifficulty("easy");
+}, false);
+mediumButton.addEventListener('click', function() {
+  settings.setDifficulty("medium");
+}, false);
+hardButton.addEventListener('click', function() {
+  settings.setDifficulty("hard");
+}, false);
+
 
 // Drag and Drop
 
@@ -78,7 +127,8 @@ function clickHandler(event) {
   });
 
   gameStarted = true;
-  startClock(300);
+  hideButtons(buttonsToHide);
+  startClock(settings.getDuration());
   showControlsAndTimer();
   hideScrambleButton();
 }
@@ -86,7 +136,9 @@ function clickHandler(event) {
 // Show and Hide Buttons
 
 function showControlsAndTimer() {
-  hint.setAttribute('class', 'hint-button');
+  if (settings.difficulty !== "hard") {
+    hint.setAttribute('class', 'hint-button');
+  }
   reset.setAttribute('class', 'reset-button');
   clock.setAttribute('class', 'timer');
 }
@@ -165,7 +217,6 @@ function stopClock() {
 }
 
 // Reset Game
-
 function resetGame() {
   var elements = [hint, reset, clock];
   var i = 0;
@@ -176,6 +227,10 @@ function resetGame() {
     pieces[i].style.display = 'none';
   }
 
+  difficultyButtons.forEach(function(element, index) {
+    return element.classList.remove('hide-element');
+  });
+
   gameStarted = false;
   count = 0;
   scramble.setAttribute('class', 'scramble-button button');
@@ -185,29 +240,36 @@ function resetGame() {
 
 // Congradulate User
 
-(function() {
-  var animations = ['animate', 'animate_rotate', 'animate_horizontal', 'animate_vertical', 'animate_crazy'];
-  var elementsToShake = document.querySelectorAll('.piece');
-  var shakeElements = function(elements) {
-    /* Will store a randomly generated integer value,
-     * needed in picking a random animation.
-     */
-    var randomIndex = 0;
 
-    function shake(elementToShake, index) {
-      // Generate random integer between 0 and the length of the array of animations.
-      randomIndex = Math.floor(Math.random() * (animations.length));
-      // Add a shake animation class to element.
-      elementToShake.classList.add(animations[randomIndex]);
-    }
-    // Call the shake function on each element.
-    elements.forEach(shake);
-  };
-  // Puzzle has been solved by gamer.
-  var puzzleSolved = function() {
-    setTimeout(shakeElements, 3000, elementsToShake);
+function shakeElements(elements) {
+  /* Will store a randomly generated integer value,
+   * needed in picking a random animation.
+   */
+  var randomIndex = 0;
+
+  function shake(elementToShake, index) {
+    // Generate random integer between 0 and the length of the array of animations.
+    randomIndex = Math.floor(Math.random() * (animations.length));
+    // Add a shake animation class to element.
+    elementToShake.classList.add(animations[randomIndex]);
   }
-  // Activate congratulations to user by calling the function.
-  // puzzleSolved();
+  // Call the shake function on each element.
+  elements.forEach(shake);
+};
 
-})()
+// Puzzle has been solved by gamer.
+function congratulateUser() {
+  setTimeout(shakeElements, 3000, pieces);
+}
+// Activate congratulations to user by calling the function.
+//congratulateUser();
+
+/***** Utitity functions *****/
+
+function hideButtons (buttons) {
+
+  return buttons.forEach(function(element, index) {
+    return element.classList.add('hide-element');
+  });
+
+};

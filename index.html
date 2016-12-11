@@ -164,6 +164,11 @@
     onmouseup="hideHint(event);">Hint</button>
     <button class="hide-element" id="reset" onclick="resetGame(event);">Reset</button>
     <div class="scramble-button button" id="scramble" onclick="clickHandler(event);">Scramble</div>
+
+    <button class="button difficulty_button" id="easy">Easy</button>
+    <button class="button difficulty_button" id="medium">Medium</button>
+    <button class="button difficulty_button" id="hard">Hard</button>
+
     <div class="hide-element" id="clock"></div>
   </div>
 
@@ -171,21 +176,6 @@
 
   <audio id="audiotag1" src="audio/game-over.mp3"></audio>
 
- <!--  <div class="wrapper">
-  <div class="puzzle">
-    <div class="drop_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="hexagon" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-  </div>
-    <div class="timer">Put Timer Here</div>
-    <div class="levels_wrap">
-      <span class="levels">Easy</span>
-      <span class="levels">Medium</span>
-      <span class="levels">Hard</span>
-    </div>
-
-    <div class="start">Scramble</div>
-    <div class="hint">Hint</div>
-  </div> -->
   <script src="script.js"></script>
 </body>
 </html>
