@@ -10,49 +10,149 @@
 
   <h1 class="puzzle-title">Hexgon Jigsaw Puzzle</h1>
   <section id="droppableZone" class="drop-zone solved">
-   <!-- Puzzle Pieces -->
-    <div id="p05" class="piece piece05" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p06" class="piece piece06" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p07" class="piece piece07" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p08" class="piece piece08" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p09" class="piece piece09" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p10" class="piece piece10" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p11" class="piece piece11" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p12" class="piece piece12" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p13" class="piece piece13" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p14" class="piece piece14" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p15" class="piece piece15" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p16" class="piece piece16" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p17" class="piece piece17" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p18" class="piece piece18" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p19" class="piece piece19" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p20" class="piece piece20" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p21" class="piece piece21" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p22" class="piece piece22" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p23" class="piece piece23" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p24" class="piece piece24" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p25" class="piece piece25" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p26" class="piece piece26" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p27" class="piece piece27" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p28" class="piece piece28" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p29" class="piece piece29" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p30" class="piece piece30" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p31" class="piece piece31" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p32" class="piece piece32" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p34" class="piece piece34" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p35" class="piece piece35" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p36" class="piece piece36" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p37" class="piece piece37" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p38" class="piece piece38" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p39" class="piece piece39" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p40" class="piece piece40" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p41" class="piece piece41" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p42" class="piece piece42" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p43" class="piece piece43" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p44" class="piece piece44" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-    <div id="p45" class="piece piece45" draggable="true" ondrag="dragHandler(event);" ondragstart="dragstartHandler(event);"></div>
-     <!-- End Puzzle Pieces -->
-
+   <!-- Puzzle pieces and container -->
+    <div style="position: absolute; top: 45px; left: 41px;">
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p45" class="piece piece45" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p44" class="piece piece44" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p27" class="piece piece27" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p26" class="piece piece26" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p23" class="piece piece23" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+    </div>
+    <div style="position: absolute; top: 95px; left: 124px;">
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p43" class="piece piece43" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p42" class="piece piece42" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p25" class="piece piece25" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p24" class="piece piece24" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+    </div>
+    <div style="position: absolute; top: 46px; left: 209px;">
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p41" class="piece piece41" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p40" class="piece piece40" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p18" class="piece piece18" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p17" class="piece piece17" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p22" class="piece piece22" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+    </div>
+    <div style="position: absolute; top: 95px; left: 293px;">
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p39" class="piece piece39" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p38" class="piece piece38" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p16" class="piece piece16" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p15" class="piece piece15" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+    </div>
+    <div style="position: absolute; top: 46px; left: 377px;">
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p37" class="piece piece37" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p36" class="piece piece36" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p14" class="piece piece14" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p13" class="piece piece13" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p21" class="piece piece21" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+    </div>
+    <div style="position: absolute; top: 95px; left: 461px;">
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p35" class="piece piece35" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p34" class="piece piece34" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p12" class="piece piece12" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p11" class="piece piece11" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+    </div>
+    <div style="position: absolute; top: 46px; left: 545px;">
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p33" class="piece piece33" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p32" class="piece piece32" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p10" class="piece piece10" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p09" class="piece piece09" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p20" class="piece piece20" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+    </div>
+    <div style="position: absolute; top: 95px; left: 629px;">
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p31" class="piece piece31" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p30" class="piece piece30" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p08" class="piece piece08" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p07" class="piece piece07" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+    </div>
+    <div style="position: absolute; top: 46px; left: 713px">
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p29" class="piece piece29" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p28" class="piece piece28" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p06" class="piece piece06" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)">
+        <div id="p05" class="piece piece05" draggable="true" ondrag="drag(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)"></div>
+      </div>
+      <div class="piece-container" ondrop="drop(event);" ondragover="dragOver(event);" ondragenter="dragEnter(event);">
+        <div id="p19" class="piece piece19" draggable="true" ondrag="drag(event);" ondragstart="dragStart(event);" ondragend="dragEnd(event)"></div>
+      </div>
+    </div>
+    <!-- End Pieces -->
   </section>
   <!--  Hint Section-->
 
@@ -60,69 +160,16 @@
 
   <!--  Control Buttons and Timer-->
   <div class="control-container">
-    <button class="hide-element" id="hint" onmousedown="showHint(event)"
-    onmouseup="hideHint(event)">Hint</button>
-    <button class="hide-element" id="reset" onclick="">Reset</button>
+    <button class="hide-element" id="hint" onmousedown="showHint(event);"
+    onmouseup="hideHint(event);">Hint</button>
+    <button class="hide-element" id="reset" onclick="resetGame(event);">Reset</button>
     <div class="scramble-button button" id="scramble" onclick="clickHandler(event);">Scramble</div>
-
-    <button class="button" id="easy">Easy</button>
-    <button class="button" id="medium">Medium</button>
-    <button class="button" id="hard">Hard</button>
-    
     <div class="hide-element" id="clock"></div>
   </div>
 
   <section id="pieces-tray" class="pieces-tray"></section>
 
-      <!-- Hex Drop Zone  
-  <section class="drop-target-group">
-     <div class="drop-target drop-target05" id="h05" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">05</div>
-     <div class="drop-target drop-target06" id="h06" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">06</div>
-     <div class="drop-target drop-target07" id="h07" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">07</div>
-     <div class="drop-target drop-target08" id="h08" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">08</div>
-     <div class="drop-target drop-target09" id="h09" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">09</div>
-     <div class="drop-target drop-target10" id="h10" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">10</div>
-     <div class="drop-target drop-target11" id="h11" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">11</div>
-     <div class="drop-target drop-target12" id="h12" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">12</div>
-     <div class="drop-target drop-target13" id="h13" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">13</div>
-     <div class="drop-target drop-target14" id="h14" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">14</div>
-     <div class="drop-target drop-target15" id="h15" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">15</div>
-     <div class="drop-target drop-target16" id="h16" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">16</div>
-     <div class="drop-target drop-target17" id="h17" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">17</div>
-     <div class="drop-target drop-target18" id="h18" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">18</div>
-     <div class="drop-target drop-target19" id="h19" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">19</div>
-     <div class="drop-target drop-target20" id="h20" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">20</div>
-     <div class="drop-target drop-target21" id="h21" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">21</div>
-     <div class="drop-target drop-target22" id="h22" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">22</div>
-     <div class="drop-target drop-target23" id="h23" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">23</div>
-     <div class="drop-target drop-target24" id="h24" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">24</div>
-     <div class="drop-target drop-target25" id="h25" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">25</div>
-     <div class="drop-target drop-target26" id="h26" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">26</div>
-     <div class="drop-target drop-target27" id="h27" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">27</div>
-     <div class="drop-target drop-target28" id="h28" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">28</div>
-     <div class="drop-target drop-target29" id="h29" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">29</div>
-     <div class="drop-target drop-target30" id="h30" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">30</div>
-     <div class="drop-target drop-target31" id="h31" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">31</div>
-     <div class="drop-target drop-target32" id="h32" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">32</div>
-     <div class="drop-target drop-target33" id="h33" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">33</div>
-     <div class="drop-target drop-target34" id="h34" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">34</div>
-     <div class="drop-target drop-target35" id="h35" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">35</div>
-     <div class="drop-target drop-target36" id="h36" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">36</div>
-     <div class="drop-target drop-target37" id="h37" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">37</div>
-     <div class="drop-target drop-target38" id="h38" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">38</div>-
-     <div class="drop-target drop-target39" id="h39" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">39</div>
-     <div class="drop-target drop-target40" id="h40" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">40</div>
-     <div class="drop-target drop-target41" id="h41" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">41</div>
-     <div class="drop-target drop-target42" id="h42" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">42</div>
-     <div class="drop-target drop-target43" id="h43" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">43</div>
-     <div class="drop-target drop-target44" id="h44" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">44</div>
-     <div class="drop-target drop-target45" id="h45" ondrop="dropHandler(event);" ondragover="dragoverHandler(event);">45</div>
-     </section>
-      End Hex Drop Zone -->
-
-    
-     </section>
-     <audio id="audiotag1" src="audio/game-over.mp3"></audio>
+  <audio id="audiotag1" src="audio/game-over.mp3"></audio>
 
  <!--  <div class="wrapper">
   <div class="puzzle">
