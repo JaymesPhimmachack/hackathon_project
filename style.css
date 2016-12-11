@@ -8,86 +8,6 @@ body {
   text-align: center;
 }
 
-/*.wrapper {
-    border: 1px solid black;
-    width: 868px;
-    margin: 0 auto;
-}
-
-.puzzle {
-    border: 1px solid black;
-    width: 868px;
-    height: 579px;
-    clear: right;
-}
-
-.drop_spot {
-    position: relative;
-    top: 35px;
-    left: 29px;
-    width: 50px;
-    height: 50px;
-}
-
-
-.levels_wrap {
-    position: relative;
-    left: 500px;
-    bottom: 70px;
-    width: 250px;
-    height: 50px;
-    margin-bottom: 10px;
-
-}
-
-.levels {
-  width: 100px;
-  border: 1px solid black;
-    border-radius: 5px;
-    text-align: center;
-    margin: 8px 0;
-    padding: 5px;
-    background-color: #555;
-  color: #888;
-}
-
-.timer {
-   position: relative;
-  left: 750px;
-  bottom: 50px;
-  width: 100px;
-  background-color: #555;
-  color: #888;
-}
-
-.start,
-.hint {
-    width: 130px;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 5px;
-    width: 130px;
-    height: 40px;
-    padding: 10px;
-}
-
-.start {
-  position: relative;
-  left: 350px;
-  bottom: 130px;
-  background-color: #555;
-  color: #888;
-}
-
-.hint {
-  margin-top: 10px;
-  position: relative;
-  bottom: 180px;
-  left: 20px;
-  background-color: #555;
-  color: #888;
-}*/
-
 .button {
   border-radius: 3px;
   display: inline-block;
@@ -123,11 +43,8 @@ body {
 }
 
 .piece {
-  display: none;
   height: 95px;
-  left: 87%;
-  position: absolute;
-  right: 0;
+  margin-bottom: 2px;
   width: 110px;
 }
 
