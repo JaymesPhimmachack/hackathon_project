@@ -2,10 +2,14 @@
     box-sizing: border-box;
 }
 
-.wrapper {
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+/*.wrapper {
     border: 1px solid black;
     width: 868px;
-    height: 800px;
     margin: 0 auto;
 }
 
@@ -13,29 +17,10 @@
     border: 1px solid black;
     width: 868px;
     height: 579px;
-    background-image: url('images/_Puzzle_bg_unsolved.png');
     clear: right;
 }
 
-.puzzle_tray {
-    width: 868px;
-    height: 221px;
-}
 
-#piece1 {
-    margin: 10px;
-    width: 110px;
-    height: 95px;
-    background-image: url('images/Group 15.png');
-}
-
-.drop_spot {
-    position: relative;
-    top: 35px;
-    left: 29px;
-    width: 50px;
-    height: 50px;
-}
 
 
 .levels_wrap {
@@ -45,7 +30,7 @@
     width: 250px;
     height: 50px;
     margin-bottom: 10px;
-    
+
 }
 
 .levels {
@@ -67,7 +52,6 @@
   background-color: #555;
   color: #888;
 }
-
 
 .start,
 .hint {
@@ -95,7 +79,332 @@
   left: 20px;
   background-color: #555;
   color: #888;
+}*/
+
+
+/********* Drop Target *********/
+
+.drop-target-group {
+  height: 579px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 834px;
+  left: 0;
+  width: 868px;
+  padding: 57px 48px;
 }
+
+.row {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -95px;
+}
+
+.drop-target {
+  width: 108px;
+  height: 94px;
+  -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+          clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  background-color: rgba(0,0,0,0.2);
+  margin-left: -25px;
+}
+
+.drop-target:nth-child(even) {
+  margin-top: 95px;
+}
+
+.row .drop-target:first-child {
+  margin-left: 0px;
+}
+
+.row:nth-child(n+1) .drop-target:nth-child(even) {
+  margin-top: 47px;
+}
+
+.row:nth-child(n+1) .drop-target:nth-child(odd) {
+  margin-top: -49px;
+}
+
+.row:last-child > .drop-target:nth-child(even) {
+  visibility: hidden;
+}
+
+
+/******* Puzzle Buttons *******/
+
+.button {
+  border-radius: 3px;
+  display: inline-block;
+  padding: .8em 1.618em;
+}
+
+.scramble-button {
+  background: #dade99;
+  margin: 0 auto !important;
+  display: inline-block;
+}
+
+.hint-button,
+.reset-button {
+  color: #979269;
+  background-color: #6d6B5b;
+  border: none;
+  border-radius: 3px;
+  float: left;
+  font-size: 16px;
+  margin-left: .7em;
+  text-align: center;
+  width: 100px;
+  padding: .8em 1.618em;
+}
+
+
+.puzzle-title {
+  color: #333;
+  font-family: sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.drop-zone {
+  height: 579px;
+  margin: 0 auto;
+  position: relative;
+  width: 868px;
+}
+
+.solved {
+  background-image: url('images/_Puzzle_solved.png');
+}
+
+.unsolved {
+  background-image: url('images/_Puzzle_bg_unsolved.png');
+}
+
+.solved-puzzle {
+  background-size: 100%;
+  height: 300px;
+  margin: 0 auto;
+  position: absolute;
+  right: 4%;
+  top: 10%;
+  width: 450px;
+  z-index: 200;
+}
+
+.control-container {
+  bottom: 2em;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  width: 868px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hide-element {
+  display: none;
+}
+
+
+
+.timer {
+  /*color: #979269;*/
+  color: black;
+  background-color: #6d6B5b;
+  border: none;
+  border-radius: 3px;
+  float: right;
+  font-size: 16px;
+  height: 2.75em;
+  margin-right: .7em;
+  text-align: center;
+  width: 100px;
+  padding: .8em 1.618em;
+}
+
+.pieces-tray {
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  width: 868px;
+}
+
+.piece {
+  display: none;
+  height: 95px;
+  left: 87%;
+  position: absolute;
+  right: 0;
+  width: 110px;
+}
+
+.piece05 {
+  background-image: url('images/Group 5.png');
+}
+
+.piece06 {
+  background-image: url('images/Group 6.png');
+}
+
+.piece07 {
+  background-image: url('images/Group 7.png');
+}
+
+.piece08 {
+  background-image: url('images/Group 8.png');
+}
+
+.piece09 {
+  background-image: url('images/Group 9.png');
+}
+
+.piece10 {
+  background-image: url('images/Group 10.png');
+}
+
+.piece11 {
+  background-image: url('images/Group 11.png');
+}
+
+.piece12 {
+  background-image: url('images/Group 12.png');
+}
+
+.piece13 {
+  background-image: url('images/Group 13.png');
+}
+
+.piece14 {
+  background-image: url('images/Group 14.png');
+}
+
+.piece15 {
+  background-image: url('images/Group 15.png');
+}
+
+.piece16 {
+  background-image: url('images/Group 16.png');
+}
+
+.piece17 {
+  background-image: url('images/Group 17.png');
+}
+
+.piece18 {
+  background-image: url('images/Group 18.png');
+}
+
+.piece19 {
+  background-image: url('images/Group 19.png');
+}
+
+.piece20 {
+  background-image: url('images/Group 20.png');
+}
+
+.piece21 {
+  background-image: url('images/Group 21.png');
+}
+
+.piece22 {
+  background-image: url('images/Group 22.png');
+}
+
+.piece23 {
+  background-image: url('images/Group 23.png');
+}
+
+.piece24 {
+  background-image: url('images/Group 24.png');
+}
+
+.piece25 {
+  background-image: url('images/Group 25.png');
+}
+
+.piece26 {
+  background-image: url('images/Group 26.png');
+}
+
+.piece27 {
+  background-image: url('images/Group 27.png');
+}
+
+.piece28 {
+  background-image: url('images/Group 28.png');
+}
+
+.piece29 {
+  background-image: url('images/Group 29.png');
+}
+
+.piece30 {
+  background-image: url('images/Group 30.png');
+}
+
+.piece31 {
+  background-image: url('images/Group 31.png');
+}
+
+.piece32 {
+  background-image: url('images/Group 32.png');
+}
+
+.piece33 {
+  background-image: url('images/Group 33.png');
+}
+
+.piece34 {
+  background-image: url('images/Group 34.png');
+}
+
+.piece35 {
+  background-image: url('images/Group 35.png');
+}
+
+.piece36 {
+  background-image: url('images/Group 36.png');
+}
+
+.piece37 {
+  background-image: url('images/Group 37.png');
+}
+
+.piece38 {
+  background-image: url('images/Group 38.png');
+}
+
+.piece39 {
+  background-image: url('images/Group 39.png');
+}
+
+.piece40 {
+  background-image: url('images/Group 40.png');
+}
+
+.piece41 {
+  background-image: url('images/Group 41.png');
+}
+
+.piece42 {
+  background-image: url('images/Group 42.png');
+}
+
+.piece43 {
+  background-image: url('images/Group 43.png');
+}
+
+.piece44 {
+  background-image: url('images/Group 44.png');
+}
+
+.piece45 {
+  background-image: url('images/Group 45.png');
+}
+
 
 /*==================================
 ANIMATIONS
@@ -139,7 +448,7 @@ ANIMATIONS
   40% { transform: translate(0, -8px) rotate(0); }
   60% { transform: translate(0, 0px) rotate(0); }
   80% { transform: translate(0, 8px) rotate(0); }
-  0%, 100% { transform: translate(0, 0) rotate(0); } 
+  0%, 100% { transform: translate(0, 0) rotate(0); }
 }
 
 .animate_vertical {
